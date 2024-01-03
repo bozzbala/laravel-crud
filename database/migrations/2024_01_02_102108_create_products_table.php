@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('description');
             $table->integer('quantity');
             $table->decimal('price');
-            $table->boolean('in_stock');
-            $table->boolean('is_published');
+            $table->boolean('in_stock')->default(1);
+            $table->boolean('is_published')->default(1);
         });
     }
 
