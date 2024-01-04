@@ -7,6 +7,32 @@
 </head>
 <body>
     <h1>Products</h1>
-    <p>Products paragraph</p>
+    @if(session()->has('success'))
+        <div>
+            {{ session('success') }}
+        </div>
+    @endif
+    <div class="table-container">
+        <table class="table" border="1">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>In stock</th>
+                <th></th>
+            </tr>
+            @foreach ($products as $item) 
+            <tr>
+                <td>{{ $item['id'] }}</td>
+                <td>{{ $item['title'] }}</td>
+                <td>{{ $item['quantity'] }}</td>
+                <td>{{ $item['price'] }}</td>
+                <td>{{ $item['in_stock'] == 1 ? "Yes" : "No"}}</td>
+                <td><a href="{{ route('product.edit', ['product' => $item]) }}">EDIT</a></td>
+            </tr>
+            @endforeach
+        </table>
+    </div>
 </body>
 </html>
