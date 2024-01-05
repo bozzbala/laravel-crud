@@ -39,7 +39,10 @@ class ProductController extends Controller
             "price" => "required|decimal:0,2",
             "quantity" => "required|numeric",
             "description" => "nullable",
+            "in_stock" => "nullable",
         ]);
+       
+        $data['in_stock'] = !empty($data['in_stock']) ? 1 : 0;
 
         $product->update($data);
 
