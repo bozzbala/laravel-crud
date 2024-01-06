@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Create product</h1>
+    <p><a href="{{ route('product.index') }}">Main Page</a></p>
     @if($errors->any())
     <ul class="errors">
         @foreach ($errors->all() as $error)

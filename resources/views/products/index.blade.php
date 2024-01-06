@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Products</h1>
+    <p><a href="{{ route('product.create') }}">Create new product</a></p>
     @if(session()->has('success'))
         <div>
             {{ session('success') }}
@@ -21,6 +22,7 @@
                 <th>Price</th>
                 <th>In stock</th>
                 <th></th>
+                <th></th>
             </tr>
             @foreach ($products as $item) 
             <tr>
@@ -30,6 +32,13 @@
                 <td>{{ $item['price'] }}</td>
                 <td>{{ $item['in_stock'] == 1 ? "Yes" : "No"}}</td>
                 <td><a href="{{ route('product.edit', ['product' => $item]) }}">EDIT</a></td>
+                <td>
+                    <form action="{{ route('product.destroy', ['product' => $item]) }}" method="post">
+                        @csrf
+                        @method("delete")
+                        <input type="submit" value="DELETE" />
+                    </form>
+                </td>
             </tr>
             @endforeach
         </table>
