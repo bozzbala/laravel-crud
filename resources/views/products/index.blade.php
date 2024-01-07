@@ -32,7 +32,7 @@
                 <td>{{ $item['price'] }}</td>
                 <td>{{ $item['in_stock'] == 1 ? "Yes" : "No"}}</td>
                 <td><a href="{{ route('product.edit', ['product' => $item]) }}">EDIT</a></td>
-                <td>
+                <td class="table-delete-button">
                     <form action="{{ route('product.destroy', ['product' => $item]) }}" method="post">
                         @csrf
                         @method("delete")
