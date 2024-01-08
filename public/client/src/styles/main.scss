@@ -1,0 +1,11 @@
+@import 'fonts', 'kit', 'layout';
+
+html, body {
+    background: $color-page-background;
+}
+
+.page-header{
+    position: sticky;
+    background-color: $color-primary;
+    height: 100px;
+}

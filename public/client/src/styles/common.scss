@@ -1,0 +1,92 @@
+$color-primary: #E9AABE;
+$color-secondary: #9387D1;
+
+$color-error: #FF1E1E;
+$color-warning: #FECC00;
+$color-success: #067D58;
+
+$color-dark: #272829;
+$color-gray-text: #777C85;
+$color-gray-border: #D4DBDF;
+$color-page-background: #F9F5F4;
+$color-block-background: #433C64;
+$color-gray-background: #ECE5DB;
+$page-layout-width: 1280px;
+$page-layout-width-wide: 1160px;
+
+$page-margin-desktop: 80px;
+$page-margin-mobile: 25px;
+
+@mixin flex($direction: row, $wrap: nowrap, $align: flex-start, $justify: flex-start) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+%centered-block {
+    padding-left: $page-margin-desktop;
+    padding-right: $page-margin-desktop;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $page-layout-width + $page-margin-desktop * 2;
+}
+
+%extended-block {
+    padding-left: $page-margin-desktop;
+    padding-right: $page-margin-desktop;
+
+    @media (max-width: 960px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+%button {
+    @include flex($align: center, $justify: center);
+
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    background: $color-primary;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-top: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background: $color-secondary;
+        color: #fff;
+    }
+}
+
+%outlined-button {
+    @include flex($align: center, $justify: center);
+
+    padding-left: var(--button-padding);
+    padding-right: var(--button-padding);
+    height: var(--button-height);
+    background: none;
+    color: var(--outline-button-text-color);
+    border: 1px solid var(--outlined-button-border-color);
+    text-decoration: none;
+    font-size: var(--button-font-size);
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, opacity 0.3s;
+    box-shadow: 0 0 0 -0.1px var(--button-focus-color);
+
+    &:hover {
+        text-decoration: none;
+        background: #fff;
+        color: $color-dark;
+    }
+
+    @media screen and (max-width: 650px) {
+        height: 45px;
+        font-size: 18px;
+    }
+}

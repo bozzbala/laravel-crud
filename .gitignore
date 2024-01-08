@@ -3,6 +3,8 @@
 /public/build
 /public/hot
 /public/storage
+/public/client/node_modules
+/public/client/dist
 /storage/*.key
 /vendor
 .env
