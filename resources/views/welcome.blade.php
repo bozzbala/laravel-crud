@@ -11,6 +11,9 @@
     </head>
     <body class="antialiased">
         <div class="page-wrap">
+            <div class="top-warning">
+                <div class="centered-text"></div>
+            </div>
             <div class="page-header">
                 
             </div>
