@@ -15,10 +15,18 @@
                 <div class="centered-text"></div>
             </div>
             <div class="page-header">
-                
+                <div class="logo"></div>
+                <div class="menu"></div>
+                <div class="right"></div>
             </div>
             <div class="page-content">
-
+                <div class="block-intro">
+                    <div class="container">
+                        <h1 class="title">Plants are our Passion</h1>
+                        <div class="description">Even if you don’t have a green thumb, you can still have a green home.</div>
+                        <a href="#" class="button">GET PLANTING</a>
+                    </div>
+                </div>
             </div>
             <div class="page-footer">
             </div>
