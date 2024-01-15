@@ -4,8 +4,43 @@ html, body {
     background: $color-page-background;
 }
 
+.top-warning{
+    background-color: $color-brand-1;
+
+    .row{
+        @include flex($justify: space-between, $align: center);
+        gap: 20px;
+        padding: 10px 0;
+        color: #FFF;
+    }
+
+    .left-filler{
+        flex: 1;
+    }
+
+    .centered-text{
+        text-align: center;
+        flex: 1;
+        font-weight: 600;
+    }
+
+    .right-col{
+        flex: 1;
+        @include flex($justify: flex-end, $align: center);
+        gap: 23px;
+
+        .support-btn{
+            font-weight: 700;
+            color: #FFF;
+
+            &:hover{
+                color: $color-brand-2;
+            }
+        }
+    }
+}
+
 .page-header{
     position: sticky;
-    background-color: $color-primary;
     height: 100px;
 }

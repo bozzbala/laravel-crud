@@ -1,21 +1,18 @@
-$color-primary: #E9AABE;
-$color-secondary: #9387D1;
 
-$color-brand-1: white;
-$color-brand-2: white;
-$color-brand-3: white;
-$color-brand-4: white;
+
+$color-brand-1: #50806B;
+$color-brand-2: #E8EDDE;
 
 $color-error: #FF1E1E;
 $color-warning: #FECC00;
 $color-success: #067D58;
 
-$color-dark: #272829;
-$color-gray-text: #777C85;
+$color-dark: #343434;
+
+$color-gray-text: #979797;
 $color-gray-border: #D4DBDF;
-$color-page-background: #F9F5F4;
-$color-block-background: #433C64;
 $color-gray-background: #ECE5DB;
+$color-page-background: #FFF;
 $page-layout-width: 1280px;
 $page-layout-width-wide: 1160px;
 
@@ -53,7 +50,7 @@ $page-margin-mobile: 25px;
     padding-left: 20px;
     padding-right: 20px;
     height: 50px;
-    background: $color-primary;
+    background: $color-brand-1;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -63,7 +60,7 @@ $page-margin-mobile: 25px;
     transition: background-color 0.3s;
 
     &:hover {
-        background: $color-secondary;
+        background: $color-brand-2;
         color: #fff;
     }
 }

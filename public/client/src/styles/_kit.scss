@@ -3,15 +3,15 @@
     --button-border-radius: 16px;
     --button-font-size: 16px;
     --button-padding: 20px;
-    --button-background-color: #{$color-primary};
-    --button-focus-color: #{$color-secondary};
+    --button-background-color: #{$color-brand-1};
+    --button-focus-color: #{$color-brand-2};
     --button-text-color: #fff;
     --button-hover-background-color: #{$color-gray-text};
     --button-hover-text-color: #fff;
 
-    --outlined-button-border-color: #{$color-primary};
-    --outlined-button-text-color: #{$color-primary};
-    --outline-button-hover-background-color: #{$color-primary};
+    --outlined-button-border-color: #{$color-brand-1};
+    --outlined-button-text-color: #{$color-brand-1};
+    --outline-button-hover-background-color: #{$color-brand-1};
     --outline-button-hover-text-color: #fff;
 }
 
@@ -35,12 +35,12 @@ body.no-scroll {
 }
 
 a {
-    color: $color-secondary;
+    color: $color-brand-2;
     text-decoration: none;
     transition: color 0.3s;
 
     &:hover {
-        color: $color-primary;
+        color: $color-brand-1;
     }
 }
 
@@ -91,11 +91,11 @@ button {
     border: none;
     background: none;
     padding: 0;
-    color: $color-secondary;
+    color: $color-brand-2;
     transition: color 0.3s;
 
     &:hover {
-        color: $color-primary;
+        color: $color-brand-1;
     }
 }
 
@@ -272,7 +272,7 @@ p {
         cursor: pointer;
 
         body.non-touch-device &:hover {
-            color: $color-primary;
+            color: $color-brand-1;
         }
 
         svg {
@@ -337,7 +337,7 @@ p {
     transition: opacity 0.3s, border-color 0.3s;
     
     &:focus-within {
-        border-color: 1px solid $color-secondary;
+        border-color: 1px solid $color-brand-2;
     }
 
     &.disabled {

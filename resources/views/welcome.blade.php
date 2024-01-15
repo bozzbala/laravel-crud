@@ -12,10 +12,19 @@
     <body class="antialiased">
         <div class="page-wrap">
             <div class="top-warning">
-                <div class="centered-text"></div>
+                <div class="centered-block">
+                    <div class="row">    
+                        <div class="left-filler"></div>
+                        <div class="centered-text">FREE SHIPPING ON ALL FULL SUN PLANTS! FEB. 25–28. </div>
+                        <div class="right-col">
+                            <div class="currency">USD</div>
+                            <a class="support-btn" href="#">Support</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="page-header">
-                <div class="logo"></div>
+                <div class="logo"><img src="{{ url('/images/logo.svg') }}" class="img" alt=""/></div>
                 <div class="menu"></div>
                 <div class="right"></div>
             </div>
